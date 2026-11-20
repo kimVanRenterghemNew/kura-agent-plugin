@@ -28,7 +28,10 @@ const CONFIG = {
     lensPort: 4318,
     // pre-tool: shell commands the agent may not run, each with what to do instead ([] = none)
     blockedCommands: [
-        { pattern: '(?:^|[;&|]\\s*)npm\\s+(?:run\\s+)?test(?=\\s|$|;|&|\\|)', message: 'Run the tests with the quiet command: npm run test:quiet.' },
+        { pattern: '(?:^|[;&|]\\s*)npm\\s+(?:run\\s+)?test(?=\\s|$|;|&|\\|)(?!.*(?:quiet|tap))', message: 'Run tests quietly: npm run test:quiet or node scripts/quiet.mjs test.' },
+        { pattern: '(?:^|[;&|]\\s*)dotnet\\s+test\\b(?!.*(?:--logger|verbosity|quiet|-v\\s*q))', message: 'Run .NET tests quietly: dotnet test --logger "console;verbosity=minimal", or .\\scripts\\quiet.ps1 dotnet, or node scripts/quiet.mjs dotnet.' },
+        { pattern: '(?:^|[;&|]\\s*)dotnet\\s+build\\b(?!.*(?:-v\\s*q|--verbosity\\s*quiet))', message: 'Run dotnet build quietly: dotnet build -v q or .\\scripts\\quiet.ps1 run dotnet build.' },
+        { pattern: '(?:^|[;&|]\\s*)pytest\\b(?!.*(?:-q|--quiet))', message: 'Run pytest quietly: pytest -q --tb=short or node scripts/quiet.mjs pytest.' },
         { pattern: '\\bgit\\s+push\\b', message: 'Never git push: the owner pushes.' }
     ],
     // start
