@@ -1,0 +1,8 @@
+{
+  "name": "kura",
+  "version": "0.2.0",
+  "description": "Kura agent workflow for any repo: polyglot (JS/TS, C#, generic), backlog planning, TDD subagents, token protection, lady-lens and opt-in hooks.",
+  "author": "Kim Van Renterghem",
+  "license": "MIT",
+  "keywords": ["kura", "tdd", "polyglot", "javascript", "typescript", "csharp", "lady-lens", "hooks", "workflow", "tokens"]
+}

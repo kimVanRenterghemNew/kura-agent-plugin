@@ -1,0 +1,12 @@
+{
+  "name": "kura-agent-plugin",
+  "description": "The Kura agent workflow as a Claude Code plugin: polyglot, token-efficient, lady-lens and opt-in hooks.",
+  "owner": { "name": "Kim Van Renterghem" },
+  "plugins": [
+    {
+      "name": "kura",
+      "source": "./plugins/kura",
+      "description": "Polyglot backlog planning (JS/TS, C#), TDD subagents, token protection, lady-lens setup and opt-in repo-specific hooks."
+    }
+  ]
+}
