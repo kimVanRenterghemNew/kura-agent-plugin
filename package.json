@@ -1,0 +1,20 @@
+{
+  "name": "kura-agent-plugin",
+  "version": "0.2.0",
+  "description": "The Kura agent harness workflow as a Claude Code / Antigravity plugin: polyglot, token-efficient, lady-lens and opt-in hooks.",
+  "type": "module",
+  "scripts": {
+    "test": "node plugins/kura/skills/kura-rules-setup/templates/rules-check.mjs selftest && node plugins/kura/skills/kura-hooks-setup/templates/hooks.mjs selftest",
+    "check": "npm test"
+  },
+  "keywords": [
+    "kura",
+    "agent-harness",
+    "tdd",
+    "polyglot",
+    "lady-lens",
+    "token-efficient"
+  ],
+  "author": "Kim Van Renterghem",
+  "license": "MIT"
+}

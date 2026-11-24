@@ -1,0 +1,29 @@
+{
+  "source": "\\.(?:cs|kt|kts|java|scala|[cm]?[jt]sx?|py|go|rs|php|rb|swift)$",
+  "exclude": "(?:^|/)(?:bin|obj|build|dist|out|target|node_modules|vendor|\\.venv|migrations|generated)/",
+  "tests": "(?:^|/)(?:tests?|spec|__tests__)/|(?:Tests?|Spec)\\.(?:cs|kt|java)$|\\.(?:test|spec)\\.[cm]?[jt]sx?$|(?:^|/)test_[^/]+\\.py$|_test\\.go$",
+  "roots": ["src"],
+  "lizard": ["lizard"],
+  "checks": {
+    "fileLines": { "max": 300 },
+    "complexity": { "max": 10 },
+    "functionLines": { "max": 40 },
+    "parameters": { "max": 5 },
+    "statusBranches": { "pattern": "\\b(?:status|state|mode|phase|kind)\\s*[!=]==?|\\bswitch\\s*\\(|\\bwhen\\s*\\(\\s*\\w*(?:status|state|mode|phase|kind)\\b" },
+    "elseIf": {},
+    "dumpFolders": { "names": ["utils", "helpers", "common", "shared", "misc", "lib", "tools"] },
+    "dependencies": {
+      "layers": {
+        "domain": { "files": "^src/Domain/", "imports": "\\.Domain\\b" },
+        "infrastructure": { "files": "^src/Infrastructure/", "imports": "\\.Infrastructure\\b|\\.infrastructure\\b" },
+        "composition": { "files": "^src/App/Composition\\." }
+      },
+      "rules": [
+        { "from": "domain", "to": "infrastructure", "why": "the domain does not know the infrastructure" },
+        { "to": "infrastructure", "onlyFrom": ["composition"], "why": "adapters are wired in the composition root only" }
+      ]
+    },
+    "contracts": { "adapters": "^src/Infrastructure/", "tests": "Contract" },
+    "agentsPaths": { "file": "AGENTS.md" }
+  }
+}
