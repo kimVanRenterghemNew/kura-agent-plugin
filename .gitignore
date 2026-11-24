@@ -27,6 +27,7 @@ bin/
 obj/
 out/
 coverage/
+localtests/
 
 # IDE & agent state
 .vscode/
