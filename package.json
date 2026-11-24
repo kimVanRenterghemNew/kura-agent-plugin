@@ -4,7 +4,7 @@
   "description": "The Kura agent harness workflow as a Claude Code / Antigravity plugin: polyglot, token-efficient, lady-lens and opt-in hooks.",
   "type": "module",
   "scripts": {
-    "test": "node plugins/kura/skills/kura-rules-setup/templates/rules-check.mjs selftest && node plugins/kura/skills/kura-hooks-setup/templates/hooks.mjs selftest",
+    "test": "node plugins/kura/skills/kura-rules-setup/templates/rules-check.mjs selftest && node plugins/kura/skills/kura-hooks-setup/templates/hooks.mjs selftest && node plugins/kura/skills/kura-dev/templates/quiet.mjs selftest",
     "check": "npm test"
   },
   "keywords": [
