@@ -144,9 +144,9 @@ The plugin automatically adapts to your project's technology stack:
 ### C# & .NET
 * **Test Runners**: `dotnet test --logger:"console;verbosity=quiet"`, xUnit, NUnit, FluentAssertions.
 * **Hexagonal Architecture**: Domain core decoupled from EF Core and external I/O via Port interfaces and shared abstract adapter contract tests.
-* **Architecture (Story 33)**: DDD immutable records (`record struct` / `sealed record`), composition over inheritance, strongly typed IDs.
+* **Architecture & Standards**: DDD immutable records (`record struct` / `sealed record`), composition over inheritance, strongly typed IDs.
 * **Rule Engine & State Machines**: Composable predicates (`All`, `Any`, `Not`) with named rule records for observable decision-making, plus pure workflow reducers (`Step`).
-* **Design Patterns**: Decorator (wrapping ports with caching/resilience), Visitor (AST/tree traversals), and in-house dispatcher ([`kimVanRenterghemNew/mediator2`](https://github.com/kimVanRenterghemNew/mediator2)).
+* **Design Patterns**: Decorator (wrapping ports with caching/resilience), Visitor (AST/tree traversals), and lightweight dispatcher ([`kimVanRenterghemNew/mediator2`](https://github.com/kimVanRenterghemNew/mediator2)).
 * **Async Resilience**: Mandatory `CancellationToken` in async signatures, stateless services, and clean timeout handling.
 
 ### Polyglot (Python, Go, Kotlin, Java, Rust, PHP, etc.)
@@ -170,7 +170,7 @@ The plugin automatically adapts to your project's technology stack:
 | **`kura-tdd-subagents`** | Isolated test-writer → code-fixer → validator subagent cycle with circuit breakers (max 5 retries, max 3 bounces). |
 | **`kura-caveman`** | Ultra-concise, high-density communication style skill to prevent context window token bloat. |
 | **`kura-js-architecture`** | JavaScript & TypeScript standards: Ports & Adapters, contract testing, and anti-pattern/dump-folder prevention. |
-| **`kura-csharp-architecture`** | C# .NET standards: Story 33 Seam Decisions, SOLID, DDD immutable records, and mediator2 patterns. |
+| **`kura-csharp-architecture`** | C# .NET standards: Seam Decisions, SOLID, DDD immutable records, and mediator2 patterns. |
 | **`kura-lens-setup`** | Cross-platform setup and verification of [lady-lens](https://www.npmjs.com/package/lady-lens) code graph MCP tooling. |
 | **`kura-hooks-setup`** | Generates repo-specific Claude Code & Git hooks tailored to your stack and operating system. |
 | **`kura-rules-setup`** | Installs the language-neutral code quality ratchet (`rules-check.mjs` + `baseline.json`). |

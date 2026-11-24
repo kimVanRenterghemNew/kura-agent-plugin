@@ -15,7 +15,7 @@ Task to execute: $ARGUMENTS
    - Decompose into **Main Story (Epic) → Sub-stories → Micro-Tasks** with real paths verified via lady-lens (`exists` / `glob`) and max 2 code examples.
    - Formulate Seam Decisions:
      * **General / JS/TS**: Ports & Adapters, functional/OOP decomposition, ESLint/rules-check baseline, quiet test runner (`npm run test:quiet` or `node --test`).
-     * **C# .NET (Story 33)**: SOLID principles, DDD immutable records (`record struct`/`record`), composition over inheritance, and in-house `mediator2` template (NO commercial MediatR).
+     * **C# .NET**: SOLID principles, DDD immutable records (`record struct`/`record`), composition over inheritance, and lightweight `mediator2` template (NO commercial MediatR).
 3. **Phase 2: TDD Subagent Loop**:
    For each micro-task:
    - Spawn / invoke `kura-test-writer` to write failing unit/integration tests (**RED**). Verify with quiet test command (`npm test`, `dotnet test`).

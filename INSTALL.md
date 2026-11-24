@@ -3,7 +3,7 @@
 `kura-agent-plugin` is a polyglot AI development harness for **Claude Code**, **Antigravity (AGY)**, and **Gemini CLI**. It equips coding agents with:
 - **`lady-lens` AST Code Graph**: Zero-hallucination code search and verified file paths.
 - **Strict 4-Agent TDD Workflow** (`/kura-dev`): Red-Green-Refactor with isolated planner, test-writer, code-fixer, and validator subagents.
-- **Language-Specific Architectures**: Hexagonal Architecture (Ports & Adapters) for JS/TS and Story 33 SOLID, DDD records, and `mediator2` for C# .NET.
+- **Language-Specific Architectures**: Hexagonal Architecture (Ports & Adapters) for JS/TS and SOLID, DDD records, and `mediator2` for C# .NET.
 - **Quiet Test Runner & Output Firewall**: Full command logs written to disk (`outputs/quiet/*.log`) with compact, high-signal summaries in terminal to prevent context window bloat.
 - **Opt-in Hooks & Ratchet Rules**: Search guards, blocked noisy commands, session briefing, and code quality thresholds.
 

@@ -3,18 +3,18 @@ name: kura-csharp-architecture
 description: >-
   C# .NET architectural guidelines: Hexagonal Architecture (Ports & Adapters),
   Fractal Composition (Records, Subsystems, Composition Root), Pure Rule Engines & Decision Core,
-  Pure State Machines & Reducers, SOLID principles, Decorator & Visitor patterns, in-house mediator2,
+  Pure State Machines & Reducers, SOLID principles, Decorator & Visitor patterns, mediator2,
   and adapter contract testing.
-  Use during planning (Story 33 Seam Decisions), implementation, and code review.
+  Use during planning (Seam Decisions), implementation, and code review.
 ---
 
-# Kura C# Architecture & Design Patterns Skill (Story 33)
+# Kura C# Architecture & Design Patterns Skill
 
-This skill provides architectural rules, pattern implementations, and SOLID guidelines for Kura C# .NET applications and microservices. It brings together **Hexagonal Architecture (Ports & Adapters)**, **Fractal Composition**, **Pure Rule Engines & State Machines**, and classic behavioral patterns (**Decorator**, **Visitor**, **Strategy**, **In-house mediator2**) in an idiomatic, modern C# style.
+This skill provides architectural rules, pattern implementations, and SOLID guidelines for Kura C# .NET applications and microservices. It brings together **Hexagonal Architecture (Ports & Adapters)**, **Fractal Composition**, **Pure Rule Engines & State Machines**, and classic behavioral patterns (**Decorator**, **Visitor**, **Strategy**, **mediator2**) in an idiomatic, modern C# style.
 
 ---
 
-## 1. Story 33: Seam Decisions Principle
+## 1. Architectural Seam Decisions Principle
 > *"Kura provides the architectural options (`seamDecisions`), the model does not invent them on the fly."*
 
 Every C# feature or refactor must explicitly evaluate and document these architectural seams:
@@ -36,7 +36,7 @@ Every C# feature or refactor must explicitly evaluate and document these archite
    - Pure reducers return data effects; I/O is executed outside the reducer.
    - Supports reviewer rollback directly from *Review* back to *Architecture* when seams are breached.
 5. **No Commercial MediatR**:
-   - Use Kim's official in-house starter template: [kimVanRenterghemNew/mediator2](https://github.com/kimVanRenterghemNew/mediator2).
+   - Use Kim's official open-source template: [kimVanRenterghemNew/mediator2](https://github.com/kimVanRenterghemNew/mediator2).
    - Resolve requests and notifications cleanly using standard `IServiceProvider`.
 6. **Structural Enhancement (Decorator)**:
    - Transparently wrap port interfaces with caching, logging, metrics, or Polly retries without touching business logic.

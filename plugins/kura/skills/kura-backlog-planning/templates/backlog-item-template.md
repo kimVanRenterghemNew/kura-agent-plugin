@@ -37,7 +37,7 @@ This template enforces Kura's standard planning hierarchy:
 - **Code Examples (Max 2 references from repository)**:
   - Example 1: `src/Kura.Common/ValueObjects/Sku.cs:1-25` (readonly record struct pattern)
   - Example 2: `tests/Kura.Common.UnitTests/ValueObjects/SkuTests.cs:10-35` (immutability and equality tests)
-- **Story 33: Seam Decisions**:
+- **Seam Decisions**:
   - *Architecture & Patterns*: See `kura-csharp-architecture` skill.
   - *DDD & Records*: Strongly typed IDs (`OrderId`) and immutable value objects (`Money`).
 - **Acceptance Criteria**:

@@ -99,11 +99,11 @@ Your task is to write minimal, clean production code to make the failing tests p
 ### B. C# / .NET Prompt Template:
 ```text
 You are an experienced C# .NET Core Software Engineer working in Kura.
-Your task is to write minimal, clean production code to make the failing tests pass (TDD Green Phase) while strictly honoring the Story 33 Seam Decisions.
+Your task is to write minimal, clean production code to make the failing tests pass (TDD Green Phase) while strictly honoring the Seam Decisions.
 
 ### Context
 - Failing test file & method: [Path to test file]
-- Story 33 Seam Decisions (SOLID, DDD & Patterns): [Records for Value Objects, Visitor, State, Strategy, Decorator, or mediator2 Dispatcher]
+- Seam Decisions (SOLID, DDD & Patterns): [Records for Value Objects, Visitor, State, Strategy, Decorator, or mediator2 Dispatcher]
 - Verified Paths & Code Examples: [Paths and snippets from the backlog item]
 
 ### Strict Engineering Rules & Circuit Breaker
@@ -111,7 +111,7 @@ Your task is to write minimal, clean production code to make the failing tests p
    - call_mcp_tool(lady-lens, definedIn, { symbol: "<interface_name>" })
 2. DDD & C# RECORD CONVENTIONS:
    - Value Objects: `public sealed record ...` or `readonly record struct`.
-   - In-house mediator2: NO third-party MediatR packages.
+   - mediator2: NO third-party MediatR packages.
    - Async Resilience: Always accept and propagate `CancellationToken`.
 3. Ponytail / Minimal Implementation:
    - Write ONLY the code necessary to turn tests GREEN. The best code is the code never written.
@@ -145,7 +145,7 @@ Your task is to conduct an objective, rigorous review of the changes implemented
 2. **No Weakened Tests**: Did any existing test get skipped, commented out, or assertion loosened? (Strictly forbidden).
 3. **Architecture & Seams**:
    - For JS/TS: Clear layer separation, no circular dependencies, no dump folders.
-   - For C#: Story 33 SOLID, DDD records (immutability), no commercial MediatR, CancellationToken propagation.
+   - For C#: SOLID, DDD records (immutability), no commercial MediatR, CancellationToken propagation.
 4. **Quality Ratchet**:
    - Run `node .kura/rules-check.mjs check` if present. Must NOT introduce new violations.
 5. **Test Suite**:

@@ -4,7 +4,7 @@ description: >-
   Master orchestrator for polyglot development (JS/TS, C#, Python, Go) in Kura.
   Coordinates a specialized 4-agent team: kura-planner (intake & story breakdown), kura-test-writer (TDD Red phase),
   kura-code-fixer (TDD Green phase), and kura-validator (independent review & quality gate).
-  Integrates kura-lens-setup for AST tooling, kura-js-architecture for Ports & Adapters, and kura-csharp-architecture for Story 33 SOLID, DDD records, and mediator2 patterns.
+  Integrates kura-lens-setup for AST tooling, kura-js-architecture for Ports & Adapters, and kura-csharp-architecture for SOLID, DDD records, and mediator2 patterns.
   Use when developing, refactoring, or planning microservices, APIs, or background workers in any stack.
 ---
 
@@ -44,7 +44,7 @@ flowchart TD
     MAIN["kura-dev<br/>(Master Orchestrator)"] --> S0["1. kura-lens-setup<br/>(Tooling & MCP setup)"]
     MAIN --> S1["2. kura-backlog-planning<br/>(kura-planner subagent)"]
     MAIN --> S2A["3a. kura-js-architecture<br/>(Ports & Adapters, Contract Tests)"]
-    MAIN --> S2B["3b. kura-csharp-architecture<br/>(Story 33 SOLID, DDD, mediator2)"]
+    MAIN --> S2B["3b. kura-csharp-architecture<br/>(SOLID, DDD, mediator2)"]
     MAIN --> S3["4. kura-tdd-subagents<br/>(test-writer, code-fixer, validator)"]
     MAIN --> S4["5. kura-caveman<br/>(Token-efficient style)"]
     MAIN --> S5["6. kura-rules-setup<br/>(Language-neutral Ratchet)"]
@@ -57,7 +57,7 @@ flowchart TD
 | **`kura-lens-setup`** | Automated installation of `lady-lens` across Windows & Linux/macOS, registering repos (`lens add`), and connecting agent MCP configurations (`lens install`, `lens install --skill`). | [kura-lens-setup](../kura-lens-setup/SKILL.md) |
 | **`kura-backlog-planning`** | Requirements intake, universal auto-inbox (`backlog/inbox.md`), `open-questions.md` management, and hierarchical story breakdown with **`kura-planner`**. | [kura-backlog-planning](../kura-backlog-planning/SKILL.md) |
 | **`kura-js-architecture`** | JavaScript & TypeScript standards: Hexagonal Ports & Adapters, Fractal Composition, Rule Engines & State Machines, Decorator & Visitor patterns, and contract testing. | [kura-js-architecture](../kura-js-architecture/SKILL.md) |
-| **`kura-csharp-architecture`** | C# .NET standards: Hexagonal Ports & Adapters, Story 33 SOLID, DDD records, Rule Engines & State Machines, and in-house `mediator2`. | [kura-csharp-architecture](../kura-csharp-architecture/SKILL.md) |
+| **`kura-csharp-architecture`** | C# .NET standards: Hexagonal Ports & Adapters, SOLID, DDD records, Rule Engines & State Machines, and `mediator2`. | [kura-csharp-architecture](../kura-csharp-architecture/SKILL.md) |
 | **`kura-tdd-subagents`** | Orchestration of **`kura-test-writer`**, **`kura-code-fixer`**, and **`kura-validator`**, with 3x review bounce limit, 5x retry circuit breaker, and Level-Up protocol. | [kura-tdd-subagents](../kura-tdd-subagents/SKILL.md) |
 | **`kura-caveman`** | Ultra-concise communication style to prevent context bloat and token exhaustion. | [kura-caveman](../kura-caveman/SKILL.md) |
 | **`kura-ponytail`** | Lazy senior dev mode: smallest complete change, ruthless YAGNI, deletion beats addition. | [kura-ponytail](../kura-ponytail/SKILL.md) |

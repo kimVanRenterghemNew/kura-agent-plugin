@@ -4,10 +4,10 @@ This reference guide provides concrete C# implementations and architectural prin
 
 ---
 
-> [!WARNING] Licensing Rule & Starter Template: No Commercial MediatR
+> [!WARNING] Licensing Rule & Template: No Commercial MediatR
 > Do **NOT** install or reference the third-party `MediatR` NuGet package (commercial licensing).
-> Instead, Kura uses Kim's **`mediator2`** repository as our official starter template:
-> 🔗 **Starter Template**: [kimVanRenterghemNew/mediator2](https://github.com/kimVanRenterghemNew/mediator2/tree/main/mediator2) *(Work in progress / evolving template)*.
+> Instead, Kura uses Kim's **`mediator2`** repository as an open-source template:
+> 🔗 **Template**: [kimVanRenterghemNew/mediator2](https://github.com/kimVanRenterghemNew/mediator2/tree/main/mediator2) *(Work in progress / evolving template)*.
 > All internal dispatching, request handling, and event publishing must be based on or align with this `mediator2` design (see Section 4.D).
 
 ---
@@ -253,8 +253,8 @@ public sealed class HtmlExportVisitor : IDocumentVisitor<string>
 }
 ```
 
-### D. In-House Dispatcher & Command Pattern (Starter Template: `mediator2`)
-To avoid commercial MediatR licensing, we use the in-house **`mediator2`** starter template:
+### D. Lightweight Dispatcher & Command Pattern (Template: `mediator2`)
+To avoid commercial MediatR licensing, we use the lightweight **`mediator2`** template:
 🔗 **Reference Template**: [kimVanRenterghemNew/mediator2](https://github.com/kimVanRenterghemNew/mediator2/tree/main/mediator2) *(WIP)*.
 
 ```csharp
